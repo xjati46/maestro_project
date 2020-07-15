@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    {% load static %}
+    <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Maestro Swim</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logo_swim.png' %}">
+  </head>
+  <body class="bg-gradient-primary">
+    <div class="container">
+      <div class="jumbotron">
+        <h1 align=center >Maestro Swim</h1>
+        <h3 align=center>System Management</h3>
+        <div class="container">
+
+          {% if user.username %}
+
+          <div class="row align-items-end">
+            <div class="col">
+              <span class='text-primary'>Selamat datang <strong>{{ user.username }}</strong><br>
+                Akses yang terbuka:
+                <strong>
+                  {% for group in user.groups.all %}
+                  {{ group }}
+                  {% endfor %}
+                </strong>
+                <br>
+                {% if user.student.nama_lengkap or user.coach.nama_lengkap or user.username == 'dnurs' %}
+                {% else %}
+                <ol>
+                  <li>Isi salah satu profil berikut untuk melengkapi pendaftaran!
+                  <button class='btn btn-primary' onclick="document.location='{% url 'student-create' %}'">Isi Profil Murid!</button>
+                  <button class='btn btn-primary' onclick="document.location='{% url 'coach-create' %}'">Isi Profil Pelatih!</button></li>
+                  <li>Setelah mengisi Profil di atas, silakan konfirmasi ke Admin dengan memberitahukan <strong>"nama user"</strong> dan <strong>"name lengkap"</strong>.</li>
+                  <li>Setelah Admin mengkonfirmasi pendaftaran, silakan login kembali untuk masuk ke halaman yang dituju.</li>
+                  <li>Pendaftaran selesai.</li>
+                </ol>
+                {% endif %}
+              </span>
+            </div>
+
+            <div class="col">
+              <h5 align=right><a href="{% url 'logout' %}">Logout</a></h5>
+            </div>
+          </div>
+
+          {% else %}
+          <h5 align=right><a href="{% url 'login' %}">Login</a></h5>
+          {% endif %}
+
+          <hr>
+          <div class="row">
+
+            <div class="col-sm-4" align=center>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">Murid</h5>
+                  <i class='fas fa-swimmer fa-5x mx-3' style="color:#7fb2f5"></i><br>
+                  <a href="{% url 'student-app:student-index'%}" class="btn btn-primary mt-3">Masuk</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4" align=center>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">Pelatih</h5>
+                  <i class='fas fa-chalkboard-teacher fa-5x mx-3' style="color:#7fb2f5"></i><br>
+                  <a href="{% url 'coach-app:coach-index' %}" class="btn btn-primary mt-3">Masuk</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4" align=center>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">Admin</h5>
+                  <i class='fas fa-user-cog fa-5x mx-3' style="color:#7fb2f5"></i><br>
+                  <a href="{% url 'admin-app:admin-index' %}" class="btn btn-primary mt-3">Masuk</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
