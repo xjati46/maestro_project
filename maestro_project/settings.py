@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'c@zaja#ek_*4bdk2g6n0q44h6@l5p^
 # DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['maestroswim.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
