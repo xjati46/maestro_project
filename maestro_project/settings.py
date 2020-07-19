@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'admin_app',
     'coach_app',
     'student_app',
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -143,3 +144,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # Heroku: Update database configuration from $DATABASE_URL.
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
+
+
+# Django import export
+IMPORT_EXPORT_USE_TRANSACTIONS = True
