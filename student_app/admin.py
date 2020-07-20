@@ -7,7 +7,7 @@ from import_export.admin import ImportExportModelAdmin
 
 @admin.register(Student)
 class StudentAdmin(ImportExportModelAdmin):
-    pass
+    list_display = ('__str__', 'id', 'nama_lengkap')
 
 
 @admin.register(Rapor)
