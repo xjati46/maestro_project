@@ -7,10 +7,10 @@ from import_export.admin import ImportExportModelAdmin
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('__str__', 'id')
 
 
 @admin.register(Order)
 class OrderAdmin(ImportExportModelAdmin):
-    list_display = ('__str__', 'student', 'coach', 'arsip')
+    list_display = ('__str__', 'id', 'student', 'coach', 'arsip')
     list_filter = ('coach', 'arsip')
