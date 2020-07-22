@@ -71,7 +71,7 @@ class Order(models.Model):
         ordering = ['student']
 
     def __str__(self):
-        return f'{self.id}/{self.student.nama_panggilan}'
+        return f'{self.id}'
 
     def is_expired(self):
         if self.tanggal_expired < timezone.now().date():
