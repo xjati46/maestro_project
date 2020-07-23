@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'coach_app',
     'student_app',
     'import_export',
+    'tempus_dominus',
 ]
 
 MIDDLEWARE = [

@@ -7,3 +7,4 @@ django-import-export==2.3.0
 diff-match-patch==20200713
 tablib==2.0.0
 openpyxl==3.0.4
+django-tempus-dominus==5.1.2.13
