@@ -10,7 +10,7 @@
       {{ form.non_field_errors }}
 
       <div class="fieldWrapper">
-        {{ form.pengenalan_air_1.errors }}
+        {{ form.order.errors }}
         <div class="row">
           <div class="col-4">
             <h3><label for="{{ form.order.id_for_label }}">KODE LATIHAN</label></h3>
@@ -33,7 +33,7 @@
                 <label for="{{ form.pengenalan_air_1.id_for_label }}">Pengaturan Nafas</label>
               </div>
               <div class="col-2">
-                {{ form.pengenalan_air_1 }}
+                <input type="number" name="pengenalan_air_1" id="id_pengenalan_air_1" data-slider-value="0" data-slider-id='ex1Slider'>
               </div>
             </div>
           </div>
@@ -44,7 +44,7 @@
                 <label for="{{ form.pengenalan_air_2.id_for_label }}">Mengapung Telungkup dan Telentang</label>
               </div>
               <div class="col-2">
-                {{ form.pengenalan_air_2 }}
+                <input type="number" name="pengenalan_air_2" id="id_pengenalan_air_2" data-slider-value="0" data-slider-id='ex1Slider'>
               </div>
             </div>
             {{ form.pengenalan_air_2.errors }}
@@ -56,7 +56,7 @@
                 <label for="{{ form.pengenalan_air_3.id_for_label }}">Teknik Meluncur</label>
               </div>
               <div class="col-2">
-                {{ form.pengenalan_air_3 }}
+                <input type="number" name="pengenalan_air_3" id="id_pengenalan_air_3" data-slider-value="0" data-slider-id='ex1Slider'>
               </div>
             </div>
             {{ form.pengenalan_air_3.errors }}
@@ -88,7 +88,7 @@
                 <label for="{{ form.gaya_bebas_1.id_for_label }}">Teknik Kaki dan Pengambilan Nafas</label>
               </div>
               <div class="col-2">
-                {{ form.gaya_bebas_1 }}
+                <input type="number" name="gaya_bebas_1" id="id_gaya_bebas_1" data-slider-value="0" data-slider-id='ex1Slider'>
               </div>
             </div>
           </div>
@@ -99,7 +99,7 @@
                 <label for="{{ form.gaya_bebas_2.id_for_label }}">Teknik Tangan dan Pengambilan Nafas</label>
               </div>
               <div class="col-2">
-                {{ form.gaya_bebas_2 }}
+                <input type="number" name="gaya_bebas_2" id="id_gaya_bebas_2" data-slider-value="0" data-slider-id='ex1Slider'>
               </div>
             </div>
             {{ form.gaya_bebas_2.errors }}
@@ -111,7 +111,7 @@
                 <label for="{{ form.gaya_bebas_3.id_for_label }}">Koordinasi Kaki, Tangan, Nafas</label>
               </div>
               <div class="col-2">
-                {{ form.gaya_bebas_3 }}
+                <input type="number" name="gaya_bebas_3" id="id_gaya_bebas_3" data-slider-value="0" data-slider-id='ex1Slider'>
               </div>
             </div>
             {{ form.gaya_bebas_3.errors }}
@@ -128,7 +128,7 @@
                 <label for="{{ form.gaya_dada_1.id_for_label }}">Teknik Kaki dan Pengambilan Nafas</label>
               </div>
               <div class="col-2">
-                {{ form.gaya_dada_1 }}
+                <input type="number" name="gaya_dada_1" id="id_gaya_dada_1" data-slider-value="0" data-slider-id='ex1Slider'>
               </div>
             </div>
           </div>
@@ -139,7 +139,7 @@
                 <label for="{{ form.gaya_dada_2.id_for_label }}">Teknik Tangan dan Pengambilan Nafas</label>
               </div>
               <div class="col-2">
-                {{ form.gaya_dada_2 }}
+                <input type="number" name="gaya_dada_2" id="id_gaya_dada_2" data-slider-value="0" data-slider-id='ex1Slider'>
               </div>
             </div>
             {{ form.gaya_dada_2.errors }}
@@ -151,7 +151,7 @@
                 <label for="{{ form.gaya_dada_3.id_for_label }}">Koordinasi Kaki, Tangan, Nafas</label>
               </div>
               <div class="col-2">
-                {{ form.gaya_dada_3 }}
+                <input type="number" name="gaya_dada_3" id="id_gaya_dada_3" data-slider-value="0" data-slider-id='ex1Slider'>
               </div>
             </div>
             {{ form.gaya_dada_3.errors }}
@@ -172,7 +172,7 @@
                 <label for="{{ form.gaya_punggung_1.id_for_label }}">Teknik Kaki dan Pengambilan Nafas</label>
               </div>
               <div class="col-2">
-                {{ form.gaya_punggung_1 }}
+                <input type="number" name="gaya_punggung_1" id="id_gaya_punggung_1" data-slider-value="0" data-slider-id='ex1Slider'>
               </div>
             </div>
           </div>
@@ -183,7 +183,7 @@
                 <label for="{{ form.gaya_punggung_2.id_for_label }}">Teknik Tangan dan Pengambilan Nafas</label>
               </div>
               <div class="col-2">
-                {{ form.gaya_punggung_2 }}
+                <input type="number" name="gaya_punggung_2" id="id_gaya_punggung_2" data-slider-value="0" data-slider-id='ex1Slider'>
               </div>
             </div>
             {{ form.gaya_punggung_2.errors }}
@@ -195,7 +195,7 @@
                 <label for="{{ form.gaya_punggung_3.id_for_label }}">Koordinasi Kaki, Tangan, Nafas</label>
               </div>
               <div class="col-2">
-                {{ form.gaya_punggung_3 }}
+                <input type="number" name="gaya_punggung_3" id="id_gaya_punggung_3" data-slider-value="0" data-slider-id='ex1Slider'>
               </div>
             </div>
             {{ form.gaya_punggung_3.errors }}
@@ -212,7 +212,7 @@
                 <label for="{{ form.gaya_kupu_1.id_for_label }}">Teknik Kaki dan Pengambilan Nafas</label>
               </div>
               <div class="col-2">
-                {{ form.gaya_kupu_1 }}
+                <input type="number" name="gaya_kupu_1" id="id_gaya_kupu_1" data-slider-value="0" data-slider-id='ex1Slider'>
               </div>
             </div>
           </div>
@@ -223,7 +223,7 @@
                 <label for="{{ form.gaya_kupu_2.id_for_label }}">Teknik Tangan dan Pengambilan Nafas</label>
               </div>
               <div class="col-2">
-                {{ form.gaya_kupu_2 }}
+                <input type="number" name="gaya_kupu_2" id="id_gaya_kupu_2" data-slider-value="0" data-slider-id='ex1Slider'>
               </div>
             </div>
             {{ form.gaya_kupu_2.errors }}
@@ -235,7 +235,7 @@
                 <label for="{{ form.gaya_kupu_3.id_for_label }}">Koordinasi Kaki, Tangan, Nafas</label>
               </div>
               <div class="col-2">
-                {{ form.gaya_kupu_3 }}
+                <input type="number" name="gaya_kupu_3" id="id_gaya_kupu_3" data-slider-value="0" data-slider-id='ex1Slider'>
               </div>
             </div>
             {{ form.gaya_kupu_3.errors }}
@@ -254,6 +254,104 @@
   </form>
 </div>
 
+<style>
+  #ex1Slider .slider-selection {
+  background: #BABABA;
+  }
+</style>
 
+<script>
+  // With JQuery
+  $('#id_pengenalan_air_1').slider({
+  	formatter: function(value) {
+  		return 'Nilai: ' + value;
+  	}
+  });
+
+  $('#id_pengenalan_air_2').slider({
+  	formatter: function(value) {
+  		return 'Nilai: ' + value;
+  	}
+  });
+
+  $('#id_pengenalan_air_3').slider({
+  	formatter: function(value) {
+  		return 'Nilai: ' + value;
+  	}
+  });
+
+  $('#id_gaya_bebas_1').slider({
+  	formatter: function(value) {
+  		return 'Nilai: ' + value;
+  	}
+  });
+
+  $('#id_gaya_bebas_2').slider({
+  	formatter: function(value) {
+  		return 'Nilai: ' + value;
+  	}
+  });
+
+  $('#id_gaya_bebas_3').slider({
+  	formatter: function(value) {
+  		return 'Nilai: ' + value;
+  	}
+  });
+
+  $('#id_gaya_dada_1').slider({
+  	formatter: function(value) {
+  		return 'Nilai: ' + value;
+  	}
+  });
+
+  $('#id_gaya_dada_2').slider({
+  	formatter: function(value) {
+  		return 'Nilai: ' + value;
+  	}
+  });
+
+  $('#id_gaya_dada_3').slider({
+  	formatter: function(value) {
+  		return 'Nilai: ' + value;
+  	}
+  });
+
+  $('#id_gaya_punggung_1').slider({
+  	formatter: function(value) {
+  		return 'Nilai: ' + value;
+  	}
+  });
+
+  $('#id_gaya_punggung_2').slider({
+  	formatter: function(value) {
+  		return 'Nilai: ' + value;
+  	}
+  });
+
+  $('#id_gaya_punggung_3').slider({
+  	formatter: function(value) {
+  		return 'Nilai: ' + value;
+  	}
+  });
+
+  $('#id_gaya_kupu_1').slider({
+  	formatter: function(value) {
+  		return 'Nilai: ' + value;
+  	}
+  });
+
+  $('#id_gaya_kupu_2').slider({
+  	formatter: function(value) {
+  		return 'Nilai: ' + value;
+  	}
+  });
+
+  $('#id_gaya_kupu_3').slider({
+  	formatter: function(value) {
+  		return 'Nilai: ' + value;
+  	}
+  });
+
+</script>
 
 {% endblock content %}
