@@ -6,7 +6,7 @@ from django.views.generic import (
                                 CreateView,
                                 )
 from admin_app.models import Order
-from coach_app.forms import CoachOrderForm
+from coach_app.forms import CoachOrderForm, RaporForm
 from student_app.models import Rapor
 from coach_app.models import Coach
 from main_app.models import Newsfeed
@@ -104,13 +104,13 @@ class RaporListView(PermissionRequiredMixin, ListView):
 class RaporCreateView(PermissionRequiredMixin, CreateView):
     permission_required = 'coach_app.view_coach'
     template_name = 'coach_app/rapor_form.html'
-    fields = '__all__'
+    form_class = RaporForm
     success_url = '/coach/rapor/'
 
-    def get_queryset(self):
-        return Rapor.objects.filter(
-            order__coach=self.request.user.coach.id
-            )
+    def get_form_kwargs(self):
+        kwargs = super(RaporCreateView, self).get_form_kwargs()
+        kwargs.update({'coach_id': self.request.user.coach.id})
+        return kwargs
 
     def handle_no_permission(self):
         return redirect('denied-access')
