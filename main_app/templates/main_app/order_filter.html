@@ -39,25 +39,55 @@
         <td>{{ order.margin_p_a }}</td>
         {% if order.margin_p_a > 0 %}
         <td>
+
           {% if order.p1 and order.p1_a %}
           {% else %}
           {{ order.p1 }} <br>
           {% endif %}
 
-          {% if order.p2 and order.p2_a %}
-          {% else %}
-          {{ order.p2 }} <br>
+          {% if order.product.jumlah_pertemuan >= 4 %}
+
+            {% if order.p2 and order.p2_a %}
+            {% else %}
+            {{ order.p2 }} <br>
+            {% endif %}
+
+            {% if order.p3 and order.p3_a %}
+            {% else %}
+            {{ order.p3 }} <br>
+            {% endif %}
+
+            {% if order.p4 and order.p4_a %}
+            {% else %}
+            {{ order.p4 }} <br>
+            {% endif %}
+
+            {% if order.product.jumlah_pertemuan == 8 %}
+
+              {% if order.p5 and order.p5_a %}
+              {% else %}
+              {{ order.p5 }} <br>
+              {% endif %}
+
+              {% if order.p6 and order.p6_a %}
+              {% else %}
+              {{ order.p6 }} <br>
+              {% endif %}
+
+              {% if order.p7 and order.p7_a %}
+              {% else %}
+              {{ order.p7 }} <br>
+              {% endif %}
+
+              {% if order.p8 and order.p8_a %}
+              {% else %}
+              {{ order.p8 }} <br>
+              {% endif %}
+
+            {% endif %}
+
           {% endif %}
 
-          {% if order.p3 and order.p3_a %}
-          {% else %}
-          {{ order.p3 }} <br>
-          {% endif %}
-
-          {% if order.p4 and order.p4_a %}
-          {% else %}
-          {{ order.p4 }} <br>
-          {% endif %}
 
         </td>
         {% endif %}
