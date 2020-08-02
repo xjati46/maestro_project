@@ -22,6 +22,7 @@ from main_app.views import (
                             DeniedAccessView,
                             CoachProfileCreateView,
                             StudentProfileCreateView,
+                            search
                             )
 from django.views.generic import RedirectView
 
@@ -44,4 +45,5 @@ urlpatterns = [
         'student_new/',
         StudentProfileCreateView.as_view(),
         name='student-create'),
+    path('search/', search, name='search'),
 ]

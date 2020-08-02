@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'student_app',
     'import_export',
     'tempus_dominus',
+    'django_filters',
 ]
 
 MIDDLEWARE = [

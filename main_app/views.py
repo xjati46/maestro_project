@@ -3,6 +3,9 @@ from main_app.forms import UserCreateForm, CoachProfileForm, StudentProfileForm
 from coach_app.models import Coach
 from student_app.models import Student
 from django.urls import reverse_lazy
+from admin_app.models import Order
+from main_app.filters import OrderFilter
+from django.shortcuts import render
 
 
 # Create your views here.
@@ -52,3 +55,11 @@ class TestTemplateView(TemplateView):
             'p': p,
         }
         return context
+
+
+def search(request):
+    order_list = Order.objects.all()
+    order_filter = OrderFilter(request.GET, queryset=order_list)
+    return render(
+        request, 'main_app/order_filter.html', {'filter': order_filter}
+        )

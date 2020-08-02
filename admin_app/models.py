@@ -124,6 +124,34 @@ class Order(models.Model):
             count += 1
         return count
 
+    def p_a_total(self):
+        count = 0
+        if self.p1_a:
+            count += 1
+        if self.p2_a:
+            count += 1
+        if self.p3_a:
+            count += 1
+        if self.p4_a:
+            count += 1
+        if self.p5_a:
+            count += 1
+        if self.p6_a:
+            count += 1
+        if self.p7_a:
+            count += 1
+        if self.p8_a:
+            count += 1
+        return count
+
+    def margin_p_a(self):
+        x = int(self.p_total())
+        y = int(self.p_a_total())
+        if x != y:
+            return x-y
+        else:
+            return '---'
+
     def p_c_total(self):
         count = 0
         if self.p1_c:
