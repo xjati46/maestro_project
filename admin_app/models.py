@@ -75,9 +75,9 @@ class Order(models.Model):
 
     def is_expired(self):
         if self.tanggal_expired < timezone.now().date():
-            return "EXPIRED"
+            return "✘EXPIRED"
         else:
-            return "OK"
+            return ""
 
     def bill(self):
         x = 0
@@ -150,7 +150,7 @@ class Order(models.Model):
         if x != y:
             return x-y
         else:
-            return '---'
+            return ''
 
     def p_c_total(self):
         count = 0
@@ -174,9 +174,9 @@ class Order(models.Model):
 
     def p_status(self):
         if self.p_total() >= self.product.jumlah_pertemuan:
-            return "SELESAI"
+            return "✘SELESAI"
         else:
-            return "OK"
+            return ""
 
     def income_coach_normal(self):
         return int(self.p_c_total() * self.coach_share())

@@ -27,6 +27,7 @@
           <th>Latihan - Afirmasi</th>
           <th>Jumlah Konfirmasi</th>
           <th>Tanggal Konfirmasi</th>
+          <th>Status</th>
         </tr>
       </thead>
       {% for order in filter.qs %}
@@ -90,7 +91,10 @@
 
 
         </td>
+        {% else %}
+        <td></td>
         {% endif %}
+        <td><span class='text-danger'>{{ order.p_status}}<br>{{ order.is_expired }}</span></td>
       </tr>
 
       {% endfor %}
