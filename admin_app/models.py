@@ -173,7 +173,7 @@ class Order(models.Model):
         return count
 
     def p_status(self):
-        if self.p_total() >= self.product.jumlah_pertemuan:
+        if self.p_c_total() >= self.product.jumlah_pertemuan:
             return "✘SELESAI"
         else:
             return ""
