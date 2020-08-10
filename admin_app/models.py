@@ -195,3 +195,9 @@ class Order(models.Model):
             (self.product.jumlah_pertemuan - self.p_c_total())
             * self.coach_share_dnurs()
             )
+
+    def income_coach_actual_normal(self):
+        return self.margin_p_a() * self.coach_share()
+
+    def income_coach_actual_dnurs(self):
+        return self.margin_p_a() * self.coach_share_dnurs()

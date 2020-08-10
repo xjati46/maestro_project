@@ -114,3 +114,18 @@ class RaporCreateView(PermissionRequiredMixin, CreateView):
 
     def handle_no_permission(self):
         return redirect('denied-access')
+
+
+class CoachPencairanListView(PermissionRequiredMixin, ListView):
+    permission_required = 'coach_app.view_coach'
+    context_object_name = 'coach_pencairan_list'
+    template_name = 'coach_app/pencairan_list.html'
+
+    def get_queryset(self):
+        return Order.objects.filter(
+            coach=self.request.user.coach.id
+            ).filter(
+            arsip='False')
+
+    def handle_no_permission(self):
+        return redirect('denied-access')

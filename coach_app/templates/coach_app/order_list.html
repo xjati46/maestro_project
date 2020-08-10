@@ -37,20 +37,12 @@
       <td>
         {{ order.tanggal_transaksi }} - {{ order.tanggal_expired }} |
         <strong>
-        {% if order.is_expired == 'EXPIRED' %}
           <span class='text-danger'>{{ order.is_expired }}</span>
-        {% else %}
-          <span class='text-success'>{{ order.is_expired }}</span>
-        {% endif %}
         </strong>
       </td>
       <td>{{ order.p_total }} / {{ order.product.jumlah_pertemuan }} |
         <strong>
-          {% if order.p_status == 'SELESAI' %}
-            <span class='text-danger'>{{ order.p_status }}</span>
-          {% else %}
-            <span class='text-success'>{{ order.p_status }}</span>
-          {% endif %}
+          <span class='text-danger'>{{ order.p_status }}</span>
         </strong>
       </td>
     </tr>

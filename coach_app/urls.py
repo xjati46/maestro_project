@@ -24,4 +24,8 @@ urlpatterns = [
         name='coach-arsip-list'),
     path('rapor/', views.RaporListView.as_view(), name='rapor-list'),
     path('rapor/new/', views.RaporCreateView.as_view(), name='rapor-create'),
+    path(
+        'pencairan/',
+        views.CoachPencairanListView.as_view(),
+        name='pencairan-list'),
 ]
