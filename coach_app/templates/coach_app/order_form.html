@@ -69,184 +69,189 @@
     <table>
       {% if order.product.jumlah_pertemuan == 1 %}
 
-        {% if order.p1_a == True %}
-        {% else%}
-          <div class="row">
-            <div class="col-2">
-              {{ form.p1.label_tag }}
-            </div>
-            <div class="col-2">
-              {{ form.p1 }}
-              {{ form.p1.errors }}
-            </div>
+        <div class="row" id='p1'>
+          <div class="col-2">
+            {{ form.p1.label_tag }}
+            {% if order.p1_a %}
+              <i class='fas fa-lock ml-4'></i>
+            {% endif %}
           </div>
-        {% endif %}
+          <div class="col-2">
+            {{ form.p1 }}
+            {{ form.p1.errors }}
+          </div>
+        </div>
 
       {% elif order.product.jumlah_pertemuan == 4 %}
 
-        {% if order.p1_a == True %}
-        {% else%}
-          <div class="row">
-            <div class="col-2">
-              {{ form.p1.label_tag }}
-            </div>
-            <div class="col-2">
-              {{ form.p1 }}
-              {{ form.p1.errors }}
-            </div>
+        <div class="row" id='p1'>
+          <div class="col-2">
+            {{ form.p1.label_tag }}
+            {% if order.p1_a %}
+              <i class='fas fa-lock ml-4'></i>
+            {% endif %}
           </div>
-        {% endif %}
+          <div class="col-2">
+            {{ form.p1 }}
+            {{ form.p1.errors }}
+          </div>
+        </div>
 
-        {% if order.p2_a == True %}
-        {% else%}
-        <div class="row">
+
+        <div class="row" id='p2'>
           <div class="col-2">
             {{ form.p2.label_tag }}
+            {% if order.p2_a %}
+              <i class='fas fa-lock ml-4'></i>
+            {% endif %}
           </div>
           <div class="col-2">
             {{ form.p2 }}
             {{ form.p2.errors }}
           </div>
         </div>
-        {% endif %}
 
-        {% if order.p3_a == True %}
-        {% else%}
-        <div class="row">
+        <div class="row" id='p3'>
           <div class="col-2">
             {{ form.p3.label_tag }}
+            {% if order.p3_a %}
+              <i class='fas fa-lock ml-4'></i>
+            {% endif %}
           </div>
           <div class="col-2">
             {{ form.p3 }}
             {{ form.p3.errors }}
           </div>
         </div>
-        {% endif %}
 
-        {% if order.p4_a == True %}
-        {% else%}
-        <div class="row">
+        <div class="row" id='p4'>
           <div class="col-2">
             {{ form.p4.label_tag }}
+            {% if order.p4_a %}
+              <i class='fas fa-lock ml-4'></i>
+            {% endif %}
           </div>
           <div class="col-2">
             {{ form.p4 }}
             {{ form.p4.errors }}
           </div>
         </div>
-        {% endif %}
+
 
       {% else %}
+
+
         <div class="row">
           <div class="col">
 
-            {% if order.p1_a == True %}
-            {% else%}
-            <div class="row">
-              <div class="col-3">
+
+            <div class="row" id='p1'>
+              <div class="col-4">
                 {{ form.p1.label_tag }}
+                {% if order.p1_a %}
+                  <i class='fas fa-lock ml-4'></i>
+                {% endif %}
               </div>
-              <div class="col-3">
+              <div class="col-4">
                 {{ form.p1 }}
                 {{ form.p1.errors }}
               </div>
             </div>
-            {% endif %}
 
-            {% if order.p2_a == True %}
-            {% else%}
-            <div class="row">
-              <div class="col-3">
+            <div class="row" id='p2'>
+              <div class="col-4">
                 {{ form.p2.label_tag }}
+                {% if order.p2_a %}
+                  <i class='fas fa-lock ml-4'></i>
+                {% endif %}
               </div>
-              <div class="col-3">
+              <div class="col-4">
                 {{ form.p2 }}
                 {{ form.p2.errors }}
               </div>
             </div>
-            {% endif %}
 
-            {% if order.p3_a == True %}
-            {% else%}
-            <div class="row">
-              <div class="col-3">
+            <div class="row" id='p3'>
+              <div class="col-4">
                 {{ form.p3.label_tag }}
+                {% if order.p3_a %}
+                  <i class='fas fa-lock ml-4'></i>
+                {% endif %}
               </div>
-              <div class="col-3">
+              <div class="col-4">
                 {{ form.p3 }}
                 {{ form.p3.errors }}
               </div>
             </div>
-            {% endif %}
 
-            {% if order.p4_a == True %}
-            {% else%}
-            <div class="row">
-              <div class="col-3">
+            <div class="row" id='p4'>
+              <div class="col-4">
                 {{ form.p4.label_tag }}
+                {% if order.p4_a %}
+                  <i class='fas fa-lock ml-4'></i>
+                {% endif %}
               </div>
-              <div class="col-3">
+              <div class="col-4">
                 {{ form.p4 }}
                 {{ form.p4.errors }}
               </div>
             </div>
-          </div>
-          {% endif %}
 
+          </div>
 
           <div class="col">
 
-            {% if order.p5_a == True %}
-            {% else%}
-            <div class="row">
-              <div class="col-3">
+            <div class="row" id='p5'>
+              <div class="col-4">
                 {{ form.p5.label_tag }}
+                {% if order.p5_a %}
+                  <i class='fas fa-lock ml-4'></i>
+                {% endif %}
               </div>
-              <div class="col-3">
+              <div class="col-4">
                 {{ form.p5 }}
                 {{ form.p5.errors }}
               </div>
             </div>
-            {% endif %}
 
-            {% if order.p6_a == True %}
-            {% else%}
-            <div class="row">
-              <div class="col-3">
+            <div class="row" id='p6'>
+              <div class="col-4">
                 {{ form.p6.label_tag }}
+                {% if order.p6_a %}
+                  <i class='fas fa-lock ml-4'></i>
+                {% endif %}
               </div>
-              <div class="col-3">
+              <div class="col-4">
                 {{ form.p6 }}
                 {{ form.p6.errors }}
               </div>
             </div>
-            {% endif %}
 
-            {% if order.p7_a == True %}
-            {% else%}
-            <div class="row">
-              <div class="col-3">
+            <div class="row" id='p7'>
+              <div class="col-4">
                 {{ form.p7.label_tag }}
+                {% if order.p7_a %}
+                  <i class='fas fa-lock ml-4'></i>
+                {% endif %}
               </div>
-              <div class="col-3">
+              <div class="col-4">
                 {{ form.p7 }}
                 {{ form.p7.errors }}
               </div>
             </div>
-            {% endif %}
 
-            {% if order.p8_a == True %}
-            {% else%}
-            <div class="row">
-              <div class="col-3">
+            <div class="row" id='p8'>
+              <div class="col-4">
                 {{ form.p8.label_tag }}
+                {% if order.p8_a %}
+                  <i class='fas fa-lock ml-4'></i>
+                {% endif %}
               </div>
-              <div class="col-3">
+              <div class="col-4">
                 {{ form.p8 }}
                 {{ form.p8.errors }}
               </div>
             </div>
-            {% endif %}
 
           </div>
         </div>
@@ -259,10 +264,33 @@
     <input type="submit" value="Simpan" class='btn btn-primary'>
     <a class='ml-3' href="{% url 'coach-app:coach-order-detail' order.pk %}">Kembali</a>
   </form>
-  <hr>
-  <em>
-  <p>Format penanggalan: "tahun-bulan-tanggal" (Contoh "2000-01-31")</p>
-  </em>
 </div>
+
+<script>
+  {% if order.p1_a %}
+    $("#p1").addClass("disabledbutton");
+  {% endif %}
+  {% if order.p2_a %}
+    $("#p2").addClass("disabledbutton");
+  {% endif %}
+  {% if order.p3_a %}
+    $("#p3").addClass("disabledbutton");
+  {% endif %}
+  {% if order.p4_a %}
+    $("#p4").addClass("disabledbutton");
+  {% endif %}
+  {% if order.p5_a %}
+    $("#p1").addClass("disabledbutton");
+  {% endif %}
+  {% if order.p6_a %}
+    $("#p2").addClass("disabledbutton");
+  {% endif %}
+  {% if order.p7_a %}
+    $("#p3").addClass("disabledbutton");
+  {% endif %}
+  {% if order.p8_a %}
+    $("#p4").addClass("disabledbutton");
+  {% endif %}
+</script>
 
 {% endblock content %}
