@@ -6,7 +6,7 @@ from import_export.admin import ImportExportModelAdmin
 
 
 @admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
+class ProductAdmin(ImportExportModelAdmin):
     list_display = ('__str__', 'id')
 
 
